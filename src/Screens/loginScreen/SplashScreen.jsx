@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { Animated, Image, StyleSheet, Text, View } from "react-native";
 import { MyStatusBar } from "../../components/commonComponents/MyStatusBar";
-import { BLACK, WHITE } from "../../constatnt/color";
+import { BLACK, PRIMARYCOLOR, WHITE } from "../../constatnt/color";
 import { CIRCLELOGO, LOGO } from "../../constatnt/imagePath";
-import { HEIGHT, WIDTH } from "../../constatnt/config";
+import { HEIGHT } from "../../constatnt/config";
 
-export default SplashScreen = () => {
+export default SplashScreen = ({navigation}) => {
     const logoOpacity = useRef(new Animated.Value(0)).current;
     const logoScale = useRef(new Animated.Value(0.5)).current;
     const textOpacity = useRef(new Animated.Value(0)).current;
@@ -34,7 +34,7 @@ export default SplashScreen = () => {
             }),
         ]).start(() => {
             // Navigate to Onboarding screen after animation completes
-            // navigation.navigate("Onboarding");
+            navigation.navigate("Login");
         });
     }, []);
 
@@ -53,7 +53,7 @@ export default SplashScreen = () => {
 
                 {/* Text at the bottom */}
                 <Animated.View style={[styles.txtContainer, { opacity: textOpacity }]}>
-                    <Text allowFontScaling={true} style={styles.txt}>Facebook</Text>
+                    <Text allowFontScaling={true} style={styles.txt}>facebook</Text>
                 </Animated.View>
             </View>
         </>
@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     txt: {
-        color: BLACK,
-        fontSize: WIDTH * 0.05, // Responsive font size
+        color: PRIMARYCOLOR,
+        fontSize: 25, // Responsive font size
         fontWeight: "bold",
     },
 });

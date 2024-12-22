@@ -4,6 +4,7 @@
 
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
-import SplashScreen from './src/screens/loginScreen/SplashScreen';
+import 'react-native-gesture-handler';
+import Navigations from './src/navigations/Navigations';
 
-AppRegistry.registerComponent(appName, () => SplashScreen);
+AppRegistry.registerComponent(appName, () => Navigations);
