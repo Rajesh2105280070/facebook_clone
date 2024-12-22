@@ -1,7 +1,7 @@
 import React from "react";
 import { Pressable, StyleSheet, Text } from "react-native";
 import { ROBOTOBOLD, ROBOTOSERIF } from "../../constants/fontPath";
-import { BLACK } from "../../constants/color";
+import { BLACK } from "../../constatnt/color";
 
 export const CustomButton = ({
     text = "",
@@ -9,7 +9,8 @@ export const CustomButton = ({
     width = "60%",
     backgroundColor = "#EA4B19",
     fontSize = 20,
-    fontFamily = ROBOTOSERIF,
+    // fontFamily = ROBOTOSERIF,
+    fontWeight = "",
     color = BLACK,
 
     onPress = () => {
@@ -26,7 +27,7 @@ export const CustomButton = ({
                     width: width,
                     backgroundColor: backgroundColor,
                 }}>
-                <Text allowFontScaling={false} style={{ ...styles.sloganTxtView, fontFamily: fontFamily, color: color, fontSize: fontSize }}>{text}</Text>
+                <Text allowFontScaling={false} style={{ ...styles.sloganTxtView, fontWeight: fontWeight, color: color, fontSize: fontSize }}>{text}</Text>
             </Pressable>
         </>
     )
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
         elevation: 10
     }, sloganTxtView: {
         fontSize: 16,
-        fontFamily: ROBOTOBOLD,
+        fontWeight: "bold",
         color: BLACK,
     }
 })

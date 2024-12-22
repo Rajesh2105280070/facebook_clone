@@ -111,7 +111,8 @@ const Styles = StyleSheet.create({
     }, lable: {
         color: "black",//BLACK,
         // fontFamily:"Roboto-Medium",
-        fontFamily: ROBOTOSERIFBOLD
+        // fontFamily: ROBOTOSERIFBOLD
+        fontWeight: "bold"
     }, lablebackgroud: {
         backgroundColor: "white",
         top: -10,
@@ -129,7 +130,8 @@ const Styles = StyleSheet.create({
     }, txtinput: {
         flex: 1,
         marginLeft: 10,
-        fontFamily: ROBOTOSERIF,
+        // fontFamily: ROBOTOSERIF,
+        fontWeight: "bold",
         color: "black",
         // fontFamily:ROBOTO_REGULAR
     }
